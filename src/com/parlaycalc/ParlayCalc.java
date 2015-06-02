@@ -1,6 +1,7 @@
 package com.parlaycalc;
 
 import java.text.DecimalFormat;
+import java.util.List;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Iterator;
@@ -15,7 +16,7 @@ import java.util.Scanner;
 public class ParlayCalc {
 
 	private double wager;
-	private ArrayList<Integer> odds; // list to hold the odds
+	private List<Integer> odds; // list to hold the odds
 
 	public ParlayCalc() {
 		this.wager = 0;
@@ -26,7 +27,7 @@ public class ParlayCalc {
 		return this.wager;
 	}
 
-	public ArrayList<Integer> getOdds() {
+	public List<Integer> getOdds() {
 		return this.odds;
 	}
 
@@ -34,7 +35,7 @@ public class ParlayCalc {
 		this.wager = wager;
 	}
 
-	public void setOdds(ArrayList<Integer> odds) {
+	public void setOdds(List<Integer> odds) {
 		this.odds = odds;
 	}
 
@@ -89,7 +90,6 @@ public class ParlayCalc {
 
 		System.out.println("\nPlace bets (enter 0 when done betting)");
 		while (true) {
-			s = new Scanner(System.in);
 			System.out.print("Money Line #" + numberOfBets + ": ");
 			int moneyLine = 0;
 			try {
